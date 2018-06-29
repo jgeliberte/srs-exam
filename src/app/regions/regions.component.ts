@@ -30,7 +30,7 @@ export class RegionsComponent implements OnInit {
     
   }
 
-  loadRegions() {
-  
+  loadRegions(region) {
+    console.log(region);
   }
 }
