@@ -30,7 +30,8 @@ export class RegionsComponent implements OnInit {
     
   }
 
-  loadRegions(region) {
-    console.log(region);
+  loadProvinces(provinces) {
+    //$('.map-settings').empty();
+    console.log(provinces);
   }
 }
