@@ -6,3 +6,8 @@
 agm-map {
   height: 800px;
 }
+
+.map-settings {
+	max-height: 800px;
+	overflow-y: auto;
+}

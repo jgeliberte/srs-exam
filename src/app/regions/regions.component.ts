@@ -29,9 +29,4 @@ export class RegionsComponent implements OnInit {
   ngOnInit() {
     
   }
-
-  loadProvinces(provinces) {
-    //$('.map-settings').empty();
-    console.log(provinces);
-  }
 }

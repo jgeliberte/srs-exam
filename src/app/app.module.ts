@@ -14,11 +14,13 @@ import { MapsComponent } from './maps/maps.component';
 import { AgmCoreModule } from '@agm/core';
 
 let routeLists: Routes = [
-  {path:'regions',component:  RegionsComponent},
-  {path:'provinces',component: ProvincesComponent},
+  {path:'regions',component:  RegionsComponent,
+  {path:'provinces/:region', component: ProvincesComponent},
   {path:'city',component: MajorCitiesComponent},
   {path:'philippines',component: PhilippinesComponent},
-  {path:'city',component: MapsComponent}
+  {path:'city',component: MapsComponent},
+  {path:'', redirectTo: '/philippines', pathMatch: 'full'},
+  {path:'**', redirectTo: '/philippines', pathMatch: 'full'},
 ];
 
 @NgModule({

@@ -1,3 +1,15 @@
-<ul class="list-group map-settings">
-  <li class="list-group-item" >PROVINCE<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></li>
-</ul>
+<div class="container main-panel">
+  <div class="col-md-6 settings-panel">
+	<div class="panel panel-primary">
+		<div class="panel-heading">Map Settings</div>
+		<div class="panel-body settings-body">
+			<ul class="list-group map-settings">
+			  <li class="list-group-item" *ngFor="let province of provinces" [value]="province" ><a [routerLink]="['/provinces', province]" > {{ province }}<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></li>
+			</ul>
+		</div>
+	</div>
+  </div>
+  <div class="col-md-6 maps-panel">
+	<app-maps></app-maps>
+  </div>
+</div>
