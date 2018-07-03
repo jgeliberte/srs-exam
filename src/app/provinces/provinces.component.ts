@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProvincesService } from '../provinces.service';
+import { Globals } from 'globals';
+import { AgmCoreModule } from '@agm/core';
+
 declare var jquery:any;
 declare var $ :any;
 
@@ -15,7 +18,9 @@ export class ProvincesComponent implements OnInit {
   provinces:any;
   sub:any;
   json_provinces:any;
-  constructor(private route:ActivatedRoute, private ajax: ProvincesService) {
+  lat:number;
+  lng:number;
+  constructor(private route:ActivatedRoute, private ajax: ProvincesService, private agm: AgmCoreModule) {
   	this.json_provinces = this.ajax.getJsonProvinces();
   }
 
@@ -35,5 +40,13 @@ export class ProvincesComponent implements OnInit {
 	    this.provinces = list_of_provinces;
 	    console.log(this.provinces);
   	});
+  }
+
+
+  loadLatAndLongs(lat,lng) {
+
+    console.log(lat);
+    console.log(lng);
+    
   }
 }
